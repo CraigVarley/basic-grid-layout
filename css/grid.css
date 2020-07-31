@@ -3,32 +3,39 @@
 ======================================== */
 
 .container {
+  margin-left:auto;
+  margin-right:auto;
   height: 100vh;
+  width:800px;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 100px minmax(200px, 1fr) 100px; 
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
+  grid-template-areas:
+  "header header two three"
+  "one one two four"
+  "six seven seven five"
+  "eight nine ten footer"
+  ;
 }
 
 header {
-/*
-  grid-column-start: 1;
-  grid-column-end: 3;
-*/
+  grid-area:header;
 }
 
-main {
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-aside {
-  grid-row-start: 1;
-  grid-row-end: 4;
-}
+div .one { grid-area:one; }
+div .two {grid-area: two;}
+div .three {grid-area: three;}
+div .four {grid-area: four;}
+div .five {grid-area:five;}
+div .six {grid-area:six;}
+div .seven {grid-area:seven;}
+div .eight {grid-area:eight;}
+div .nine {grid-area:nine;}
+div .ten {grid-area: ten;}
 
 footer {
-
+  grid-area:footer;
 }
 
 
